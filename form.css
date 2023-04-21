@@ -12,28 +12,31 @@
   align-items: center;
 }
 .card {
+  position: relative;
+  overflow: hidden;
   padding-top: 20px;
   background-color: #e2e2e2;
   height: 460px;
-  width: 350px;
-  border-radius: 25px;
+  width: 90%;
+  max-width: 350px;
+  border-radius: 16px;
   box-shadow: 4px 4px 10px #c4c4c4, -4px -4px 10px #f2f2f2;
   display: flex;
   flex-direction: column;
   align-items: center;
 }
-.header-card {
+.card__header {
   height: 80px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
 }
-h1 {
+.header__title {
   color: rgb(120, 112, 112);
   text-shadow: 5px 5px 4px #c4c4c4, -5px -5px 4px #fff;
 }
-p {
+.header__caption {
   color: rgb(115, 105, 105);
 }
 .form-container {
@@ -103,9 +106,29 @@ a {
   justify-content: center;
   align-items: center;
 }
+.circle-second,
+.circle-first {
+  width: 90px;
+  height: 90px;
+  border-radius: 50%;
+  background-color: #e2e2e2;
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 4px 4px 10px #c4c4c4, -4px -4px 10px #f2f2f2;
+}
+.circle-first {
+  top: -32px;
+  right: -20px;
+}
+.circle-second {
+  bottom: -32px;
+  left: -20px;
+}
 @media (min-width: 800px) {
   .card {
-    width: 540px;
+    max-width: 540px;
   }
   .form-container {
     width: 70%;
@@ -136,5 +159,25 @@ a {
     justify-content: center;
     margin-top: 30px;
     text-align: center;
+  }
+  .circle-first,
+  .circle-second {
+    width: 110px;
+    height: 110px;
+    border-radius: 50%;
+    background-color: #e2e2e2;
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 4px 4px 10px #c4c4c4, -4px -4px 10px #f2f2f2;
+  }
+  .circle-first {
+    top: -40px;
+    right: -20px;
+  }
+  .circle-second {
+    bottom: -40px;
+    left: -20px;
   }
 }
